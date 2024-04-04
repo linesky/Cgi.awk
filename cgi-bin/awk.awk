@@ -1,2 +1,2 @@
 #!/usr/bin/awk -f
-BEGIN { print "Hello, world" }
+BEGIN { print "<html><body bgcolor='blue'>Hello, world</body><html>" }
