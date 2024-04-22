@@ -18,6 +18,8 @@ def sline(argvs):
      txtx=txt.split("\n")
      txt=None
      inss1=None
+     inss2=None
+     inss3=None
      inss=None
      for n in txtx:
          inss=n.find(">:")
@@ -31,20 +33,28 @@ def sline(argvs):
                  print(n)
          else:
              inss1=n.find(":")
-             n=n.replace(">","")
-             n=n.replace("<","")
+             
              if inss1>-1:
               	inss1+=1
               	n=n[inss1:]
+
               	xtxt=n.split("	")
               	n1=0;
+              	
               	if len(xtxt)>1:
               	    print("        ",end="")
               	    for nnn in xtxt:
               	        if n1>1:
+              	            inss2=nnn.find(" <")
+              	            if inss2>-1:
+              	                inss3=nnn.find("   ")
+              	                nnn=nnn[:inss3]+nnn[inss2:]
+              	                nnn=nnn.replace("<","")
+              	                nnn=nnn.replace(">","")
               	            print(nnn+" ",end="")		
               	        n1+=1
               	    print("")
+              	
 	
 print("\x1bc\x1b[43;37m")	
 if sys.argv[1]!="":
