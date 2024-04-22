@@ -31,12 +31,15 @@ def sline(argvs):
                  print(n)
          else:
              inss1=n.find(":")
+             n=n.replace(">","")
+             n=n.replace("<","")
              if inss1>-1:
               	inss1+=1
               	n=n[inss1:]
               	xtxt=n.split("	")
               	n1=0;
               	if len(xtxt)>1:
+              	    print("        ",end="")
               	    for nnn in xtxt:
               	        if n1>1:
               	            print(nnn+" ",end="")		
