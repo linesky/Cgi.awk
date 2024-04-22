@@ -27,13 +27,21 @@ def sline(argvs):
              if inss1>-1:
                  inss1+=1
                  n=n[inss1:]
-         
+                 print("")
+                 print(n)
          else:
              inss1=n.find(":")
              if inss1>-1:
               	inss1+=1
-              	n=n[inss1:]		
-         print(n)
+              	n=n[inss1:]
+              	xtxt=n.split("	")
+              	n1=0;
+              	if len(xtxt)>1:
+              	    for nnn in xtxt:
+              	        if n1>1:
+              	            print(nnn+" ",end="")		
+              	        n1+=1
+              	    print("")
 	
 print("\x1bc\x1b[43;37m")	
 if sys.argv[1]!="":
