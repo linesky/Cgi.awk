@@ -8,8 +8,8 @@ def scommand(data):
 	
 def sline(argvs):
      
-     scommand("objdump  -M intel -d -S $1 ".replace("$1",argvs))
-				
+     scommand("objdump  -M intel -d -S $1 > /tmp/out.txt".replace("$1",argvs))
+     scommand("gedit /tmp/out.txt")			
      
 	
 print("\x1bc\x1b[43;37m")	
