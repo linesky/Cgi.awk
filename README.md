@@ -1,2 +1,4 @@
-# Cgi.awk
-awk cgi script server
+# lib.disembler
+
+
+dissembler any lib.a
