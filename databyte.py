@@ -44,6 +44,8 @@ def sline(argvs1,argvs2):
               	
               	if len(xtxt)>1:
               	    txtxx=xtxt[1].split(" ")
+              	    if xtxt[1].find("e8 fc ff ff ff")>-1:
+              	        txtxx=txtxx[1:]
               	    counts=0
               	    for tx in txtxx:
               	        if counts==0:
