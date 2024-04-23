@@ -120,7 +120,7 @@ def slines1(argvs):
               	        n1+=1
               	    f2.write("\n")
      f2.close()
-     scommand("printf " " > outs.txt ")       	
+     scommand("echo  ------------------------------ > outs.txt ")       	
      for mmm in lst1:
          print(mmm)
          scommand("objdump -M intel -D -b binary --start-address=$1 -mi386 -Maddr32,data32 /tmp/out.bin".replace("$1",mmm))
@@ -193,7 +193,7 @@ def sline(argvs1,argvs2):
      scommand("objdump -M intel -D -b binary -mi386 -Maddr32,data32 /tmp/out.bin> out.txt")        	   
      slines1("")
      scommand("cat /tmp/out.asm")
-     scommand("cat /tmp/outs.asm")      	
+          	
 	
 print("\x1bc\x1b[43;37m")	
 if sys.argv[1]!="" and sys.argv[2]!="":
